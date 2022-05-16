@@ -1,3 +1,99 @@
 * {
     font-family: 'Roboto', sans-serif;
 }
+
+
+/* Обратите внимание на измения для "липкой" шапки, пометил их звездочкой ниже */
+header {
+    position: relative;
+    height: 50px; /* * */
+}
+
+nav {
+    position: fixed; /* * */
+    width: 100%; /* * */
+    height: 50px;
+    background-color: #212121;
+    z-index: 2; /* * */
+}
+
+.menu {
+    display: flex;
+    justify-content: space-between;
+    padding: 13px 70px;
+    /* чтобы все элементы выровнялись по вертикали, ибо изначально высота нашего блока всего 44 пикселя, она не доставала до нашей шапки*/
+    margin: 0;
+    /* надо сбрасывать */
+    list-style-type: none;
+
+}
+
+.menu .menu_link {
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: 300;
+    /* манипулирует с помощью шрифтов */
+}
+
+.menu .menu_item {
+    border-right: 2px dotted white;
+    padding-right: 28px;
+    /* устанавливаем границу для нашей пунктирной линии */
+}
+
+.subheader {
+    /* height: 84px; */
+    background-color: rgba(0, 0, 0, .6);
+    /* используем альфа канал, чтобы не все было прозрачным. */
+
+    position: absolute;
+    top: 50px; /* * */
+    width: 100%;
+    height: 84px;
+}
+
+.subheader .subheader_logo {
+    display: block;
+    max-width: 100%;
+    /* если вдруг изменится картинка */
+    margin: 0 auto;
+}
+
+.subheader .subheader_call {
+    color: #ffffff;
+    font-size: 12px;
+    font-weight: 300;
+    margin-top: 19px;
+    text-align: right;
+}
+
+.subheader .subheader_phone {
+    display: block;
+    margin-top: 8px;
+    color: #ffffff;
+    font-size: 22px;
+    font-weight: 400;
+    text-transform: uppercase;
+    text-align: right;
+    line-height: 12px;
+}
+
+.subheader .subheader_btn {
+    margin-top: 19px;
+    /* стилизуем саму кнопку */
+    width: 172px;
+    height: 46px;
+    box-shadow: inset 0 -3px 0 rgba(0, 0, 0, 0.12);
+    border: none;
+    border-radius: 10px; /* закругляем */
+    background-image: linear-gradient(to top, #1eacc7 0%, #4ce2ff 100%);
+
+
+
+    /* стилизовали текст */
+    font-size: 14px;
+    font-weight: 400;
+    text-transform: uppercase;
+    text-shadow: 1px 1px 0px rgba(0,0,0, 0.21);
+    color: #ffffff;
+}
