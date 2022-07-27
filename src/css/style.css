@@ -141,7 +141,7 @@ nav {
     margin-top: 23px;
 }
 
-.promo .promo-btn {
+.promo .promo_btn {
     display: block;
     /*  ибо кнопка - это блочно-строчный элемент, поэтому меняем его на блочный, чтобы потом поставить его по центру */
     margin: 118px auto 0 auto;
