@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   font-family: "Roboto", sans-serif;
 }
@@ -81,6 +82,10 @@ nav {
   text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.21);
   color: #ffffff;
 }
+.subheader_btn:hover {
+  background-image: none;
+  background-color: #1eacc7;
+}
 
 .promo {
   min-height: 800px;
@@ -112,7 +117,7 @@ nav {
   font-weight: 400;
   line-height: 24px;
   text-align: center;
-  margin-top: 23px;
+  margin-top: 23px ujn;
 }
 .promo_btn {
   display: block;
@@ -130,6 +135,10 @@ nav {
   text-transform: uppercase;
   background-image: -webkit-gradient(linear, left bottom, left top, from(#1eacc7), to(#4ce2ff));
   background-image: linear-gradient(to top, #1eacc7 0%, #4ce2ff 100%);
+}
+.promo_btn:hover {
+  background-image: none;
+  background-color: #1eacc7;
 }
 
 .reasons {
@@ -291,6 +300,27 @@ nav {
   margin: 0 auto;
   border-radius: 100%;
   cursor: pointer;
+}
+.mobile_item_plus::before {
+  /* делаем минусик (для того, чтобы потом был плюсик на странице) */
+  content: "";
+  display: block;
+  width: 14px;
+  height: 2px;
+  background-color: #1eacc7;
+}
+.mobile_item_plus::after {
+  /* делаем вертикальную черту для плюсика */
+  content: "";
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  /* на 1 пиксель свинем влево, это такой лайфхак. по оси Х на 50 процентов */
+  display: block;
+  height: 14px;
+  width: 2px;
+  background-color: #1eacc7;
 }
 
 .choice {

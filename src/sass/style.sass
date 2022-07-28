@@ -1,6 +1,13 @@
 $main-color: #1eacc7
 $second-color: #ff5656
 
+=btn_hover
+    &:hover
+        background-image: none
+        background-color: $main-color
+
+
+
 *
     font-family: 'Roboto', sans-serif
 
@@ -67,6 +74,8 @@ nav
         text-transform: uppercase
         text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.21)
         color: #ffffff
+        +btn_hover
+        
 
 .promo
     min-height: 800px
@@ -97,7 +106,7 @@ nav
         font-weight: 400
         line-height: 24px
         text-align: center
-        margin-top: 23px
+        margin-top: 23px ujn
 
     &_btn
         display: block
@@ -113,6 +122,7 @@ nav
         font-weight: 400
         text-transform: uppercase
         background-image: linear-gradient(to top, $main-color 0%, #4ce2ff 100%)
+        +btn_hover
 
 .reasons
     padding: 71px 0 65px 0
@@ -226,12 +236,32 @@ nav
             bottom: 35px
             left: 50%
             transform: translateX(-50%)
+
             width: 26px
             height: 26px
             background-color: #000000
             margin: 0 auto
             border-radius: 100%
             cursor: pointer
+            &::before  
+                /* делаем минусик (для того, чтобы потом был плюсик на странице) */
+                content: ''
+                display: block
+                width: 14px
+                height: 2px
+                background-color: $main-color
+            &::after 
+                /* делаем вертикальную черту для плюсика */
+                content: ''
+                position: absolute
+                left: 50%
+                transform: translateX(-50%)
+                /* на 1 пиксель свинем влево, это такой лайфхак. по оси Х на 50 процентов */
+                display: block
+                height: 14px    
+                width: 2px
+                background-color: $main-color
+
 
 .choice
     position: relative
